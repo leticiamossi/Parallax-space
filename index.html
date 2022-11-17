@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <a id="logo">Logo</a>
+            <ul>
+                <li><a class="active">Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Work</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="imagem/stars.png" id="stars">
+            <img src="imagem/planeta.png" id="planetas">
+            <img src="imagem/lua.png" id="lua">
+            <h2 id="text">SPACE TRAVEL</h2>
+            <img src="imagem/interior-nave.png" id="interior-nave">
+        </section>
+        <div id="exemplo">
+            <h3>Parallax</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi tristique senectus et netus et. Sem nulla pharetra diam sit amet 
+                nisl. Et tortor at risus viverra adipiscing at. Euismod in pellentesque massa placerat duis ultricies lacus sed turpis. Purus in massa tempor nec feugiat nisl pretium. Risus nec feugiat in fermentum 
+                posuere urna. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Proin libero nunc consequat interdum. Odio ut sem nulla pharetra diam sit amet nisl. Gravida dictum fusce ut placerat orci 
+                nulla. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Non blandit massa enim nec dui. Sed felis eget velit aliquet sagittis id consectetur purus ut.<br><br>Semper viverra nam 
+                libero justo. Condimentum vitae sapien pellentesque habitant. Id ornare arcu odio ut sem nulla. Quisque id diam vel quam elementum pulvinar etiam non. Lobortis scelerisque fermentum dui faucibus in. 
+                Quisque egestas diam in arcu cursus euismod quis viverra. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Ut aliquam purus sit amet luctus. Fusce id velit ut tortor.
+                Mauris commodo quis imperdiet massa. Eu volutpat odio facilisis mauris. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim.<br><br>Lorem ipsum dolor sit amet consectetur 
+                adipiscing elit duis. Nisi lacus sed viverra tellus. Scelerisque in dictum non consectetur a. Sit amet facilisis magna etiam tempor orci eu lobortis. Amet nisl suscipit adipiscing bibendum est 
+                ultricies. Nulla pharetra diam sit amet nisl suscipit. Feugiat in ante metus dictum at tempor commodo ullamcorper a. Nunc consequat interdum varius sit amet mattis vulputate enim nulla. Turpis 
+                egestas integer eget aliquet nibh praesent tristique magna sit. Luctus accumsan tortor posuere ac ut consequat. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel. Quam pellentesque 
+                nec nam aliquam sem.<br><br>Neque viverra justo nec ultrices dui sapien eget mi. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Purus non enim praesent elementum facilisis leo. Non 
+                arcu risus quis varius. Non enim praesent elementum facilisis leo vel fringilla. Lacus luctus accumsan tortor posuere ac. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. 
+                In dictum non consectetur a erat nam at lectus urna. Euismod quis viverra nibh cras pulvinar mattis. Convallis tellus id interdum velit laoreet id donec ultrices tincidunt. Porta lorem mollis aliquam 
+                ut porttitor leo a diam. Quam nulla porttitor massa id. Quis eleifend quam adipiscing vitae proin sagittis. Velit laoreet id donec ultrices tincidunt arcu non sodales neque. Potenti nullam ac tortor 
+                vitae purus faucibus ornare suspendisse sed. Scelerisque eu ultrices vitae auctor eu augue ut. Pellentesque dignissim enim sit amet venenatis urna cursus. Cursus sit amet dictum sit amet justo.<br><br>
+                Aliquam faucibus purus in massa tempor nec feugiat. Id nibh tortor id aliquet lectus proin. Id ornare arcu odio ut sem nulla pharetra. Aenean pharetra magna ac placerat vestibulum lectus mauris. 
+                Nec feugiat in fermentum posuere urna. Eget dolor morbi non arcu. Arcu dui vivamus arcu felis. Pharetra sit amet aliquam id diam. Quis varius quam quisque id diam vel quam elementum pulvinar. Vitae 
+                turpis massa sed elementum tempus egestas sed sed. Accumsan tortor posuere ac ut consequat semper.
+            </p>
+        </div>
+        <script>
+            let stars = document.getElementById('stars');
+            let planeta = document.getElementById('planetas');
+            let lua = document.getElementById('lua');
+            let text = document.getElementById('text');
+            let interior_nave = document.getElementById('interior-nave');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.top = value * 0.25 + "px";
+                stars.style.left = value * 0.25 + "px";
+                planeta.style.top = value * 2 + "px";
+                lua.style.top = value * 1 + "px";
+                interior_nave.style.bottom = value * 0 + "px";
+                text.style.top = value * 2 + "px";
+                text.style.marginLeft = value * 1.5 + "px";
+                header.style.top = value * 0.5 + "px";
+            })
+        </script>
+    </body>
+</html>
